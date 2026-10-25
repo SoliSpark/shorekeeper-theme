@@ -1,0 +1,40 @@
+{
+  "name": "@local/dsh-shorekeeper-startup",
+  "version": "1.2.0",
+  "private": true,
+  "description": "守岸人主题：逐笔绘制的线稿启动动画 + 可替换图片/视频的全屏背景，侧边栏内可调节界面透明度。",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "build.mjs",
+    "client.template.js",
+    "assets/startup.mp4",
+    "assets/loop.mp4",
+    "assets/sketch_paths.json",
+    "assets/logo.svg",
+    "assets/logo_parts.json",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout"
+      ]
+    }
+  }
+}

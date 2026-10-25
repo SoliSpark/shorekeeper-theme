@@ -1,0 +1,3 @@
+- insert:
+    - id: shorekeeper-startup
+      name: '@local/dsh-shorekeeper-startup'
